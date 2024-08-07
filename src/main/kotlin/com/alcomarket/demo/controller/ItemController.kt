@@ -15,8 +15,7 @@ class ItemController(private val itemService: ItemService) {
 
     @GetMapping("/{id}")
     fun getItemWithAvailability(@PathVariable id: String): ResponseEntity<ItemWithAvailabilityDto> {
-        val updatedItem = itemService.checkAvailabilityAndUpdatePrice(id)
-        return ResponseEntity.ok(updatedItem)
+        return ResponseEntity.ok(itemService.checkAvailabilityAndUpdatePrice(id))
     }
 
     @GetMapping("/price")
