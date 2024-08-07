@@ -22,7 +22,7 @@
     ```bash
     APP_PORT=8080
     MONGO_PORT=27017
-    MONGODB_URI=mongodb://mongo:${MONGO_PORT}/testdb
+    MONGODB_URI=mongodb://localhost:${MONGO_PORT}/testdb
     FETCH_ITEMS_URL=https://aitec.one/testapp/items.json
     ITEM_AVAILABILITY_URL=https://webhook.site/924bba4c-b9fd-4fc5-9307-d8f1f6ff5b0e
     FETCH_ITEMS_SCHEDULED_JOB_CRON=0 * * * * *
