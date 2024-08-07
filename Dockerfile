@@ -7,9 +7,11 @@ COPY gradlew /app
 COPY build.gradle.kts /app
 COPY settings.gradle.kts /app
 
+RUN ./gradlew build --no-daemon -x test || return 0
+
 COPY src /app/src
 
-RUN ./gradlew build -x test
+RUN ./gradlew build --no-daemon -x test
 
 FROM openjdk:17-jdk-slim
 
